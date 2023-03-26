@@ -37,6 +37,7 @@ GET users count: /api/v1/users/get/count
 
 ```
 POST     /api/v1/users/register
+(name, email, password, phone)
 ```
 
 #### Login user
@@ -45,5 +46,6 @@ To login the user and get the auth token:
 
 ```
 POST     /api/v1/users/login
+(email, password)
 ```
 
