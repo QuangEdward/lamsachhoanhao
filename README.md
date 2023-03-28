@@ -48,4 +48,10 @@ To login the user and get the auth token:
 POST     /api/v1/users/login
 (email, password)
 ```
+#### Logout user
+
+```
+POST     /api/v1/users/logout
+
+```
 
