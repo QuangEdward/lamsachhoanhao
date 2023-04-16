@@ -82,6 +82,12 @@ router.post('/login', async (req, res) => {
             secret,
             { expiresIn: '1d' }
         )
+        const rememberMe = req.body.rememberMe; // boolean indicating whether to remember the user
+        // Set the authentication token as a cookie
+        res.cookie('token', token, {
+            httpOnly: true,
+            maxAge: rememberMe ? 30 * 24 * 60 * 60 * 1000 : null // set the cookie to expire after 30 days if "remember me" is checked, otherwise let it expire at the end of the session
+        });
 
         res.status(200).send({ user: user.email, token: token })
     } else {
