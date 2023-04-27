@@ -89,7 +89,7 @@ router.post('/login', async (req, res) => {
             maxAge: rememberMe ? 30 * 24 * 60 * 60 * 1000 : null // set the cookie to expire after 30 days if "remember me" is checked, otherwise let it expire at the end of the session
         });
 
-        res.status(200).send({ user: user.email, token: token })
+        res.status(200).send({ user: user.email, token: token, name: user.name })
     } else {
         res.status(400).send('password is wrong!');
     }
