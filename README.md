@@ -9,6 +9,16 @@ CONNECTION_STRING = mongodb+srv://minhquangln:lnmq2002@edward.9ufk7rw.mongodb.ne
 
 # Routes
 
+### Category
+
+```
+GET      /api/v1/categories
+GET      /api/v1/categories/:id
+POST     /api/v1/categories
+PUT      /api/v1/categories/:id
+DELETE   /api/v1/categories/:id
+```
+
 ### Services
 
 ```
