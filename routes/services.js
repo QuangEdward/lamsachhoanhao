@@ -86,8 +86,6 @@ router.put('/:id', async (req, res) => {
     if (!mongoose.isValidObjectId(req.params.id)) {
         return res.status(400).send('Invalid Product Id')
     }
-    const category = await Category.findById(req.body.category);
-    if (!category) return res.status(400).send('Invalid Category')
 
     const product = await Product.findByIdAndUpdate(
         req.params.id,
@@ -174,5 +172,31 @@ router.put(
         res.send(product);
     }
 )
+router.patch('/:id', async (req, res) => {
+    if (!mongoose.isValidObjectId(req.params.id)) {
+        return res.status(400).send('Invalid Product Id')
+    }
+
+    const updates = Object.keys(req.body);
+    const allowedUpdates = ['name', 'description', 'richDescription','rating', 'numReviews', 'isFeatured'];
+    const isValidUpdate = updates.every(update => allowedUpdates.includes(update));
+
+    if (!isValidUpdate) {
+        return res.status(400).send('Invalid update fields!');
+    }
+
+    try {
+        const product = await Product.findByIdAndUpdate(req.params.id, req.body, { new: true });
+
+        if (!product) {
+            return res.status(404).send('Product not found!');
+        }
+
+        res.send(product);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+})
+
 
 module.exports = router;

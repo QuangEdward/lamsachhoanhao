@@ -10,8 +10,12 @@ function authJwt() {
     }).unless({
         path: [
             { url: /\/public\/uploads(.*)/, methods: ['GET', 'OPTIONS'] },
+            { url: /\/uploads\/news(.*)/, methods: ['GET', 'OPTIONS'] },
             { url: /\/api\/v1\/services(.*)/, methods: ['GET', 'OPTIONS'] },
             { url: /\/api\/v1\/categories(.*)/, methods: ['GET', 'OPTIONS'] },
+            { url: /\/api\/v1\/news(.*)/, methods: ['GET', 'OPTIONS'] },
+            { url: /\/api\/v1\/orders(.*)/, methods: ['POST', 'OPTIONS'] },
+
             `${api}/users/login`,
             `${api}/users/register`,
         ]
@@ -19,10 +23,6 @@ function authJwt() {
 }
 
 async function isRevoked(req, payload, done) {
-    if(!payload.isAdmin) {
-        done(null, true)
-    }
-
     done();
 }
 
