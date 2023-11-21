@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'R', sans-serif;
+    position: relative;
+}
+
+#header {
+    height: 60px;
+    background-color: #303030;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+}
+
+.nav-account {
+    position: relative;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.logout {
+    position: absolute;
+    top: 59px;
+    padding: 10px 20px;
+    border: 1px #ccc solid;
+    margin-left: 30px;
+    background-color: #EBEBEB;
+    cursor: pointer;
+    display: none;
+    border-top: none;
+    z-index: 1;
+}
+
+.nav-account:hover .logout {
+    display: block;
+}
+
+.logout:hover {
+    color: #525252;
+}
+
+.username {
+    margin-right: 30px;
+    color: #ccc;
+    padding:0 30px;
+    font-size: 20px;
+}
+
+.toWebsite {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+    border-right: 1px solid #ccc;
+    padding: 0 30px;
+}
+
+.nav-bar {
+    width: 20%;
+    position: absolute;
+    top: 0px;
+    height: 100vh;
+}
+
+.nav-menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+.nav-menu:not(:first-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-menu:hover {
+    cursor: pointer;
+}
+
+.mgright {
+    margin-right: 10px;
+}
+
+.right {
+    position: absolute;
+    right: 20px;
+}
+
+#content {
+    position: absolute;
+    left: 20%;
+    width: 80%;
+}
+
+.header-content {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.home-title {
+    margin-left: 10px;
+}
+
+.admin-home-title {
+    margin-left: 10px;
+}
+
+.header-content > i, .service, .list, .home-title {
+    margin-right: 10px;
+}
+
+.home-title {
+    display: flex;
+}
+
+.content {
+    max-width: 100%;
+}
+
+.content > input {
+    padding: 10px;
+    width: 40%;
+    font-size: 18px;
+}
+
+.content > button {
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+table thead {
+    background-color: #E1E1E1;
+    height: 60px;
+}
+
+table thead th {
+    padding: 16px;
+    text-align: left;
+    border-right: 1px solid #ccc;
+}
+
+table tbody td {
+    padding: 16px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 60px;
+}
+
+.delButton {
+    padding: 5px;
+    cursor: pointer;
+}
+
+img {
+    width: 80%;
+}
+
+#myCheck:hover {
+    cursor: pointer;
+}
+
+#modal, #update-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-add-service {
+    margin-top: 20px;
+}
+
+.modal-content {
+    margin: auto;
+    width: 80%;
+    background-color: #fff;
+    height: 80%;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 27px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.modal-header span {
+    font-weight: 600;
+}
+
+.modal-header i:hover {
+    cursor: pointer;
+}
+
+.modal-update-news {
+    padding-top: 20px;
+}
+
+.form-control {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-control label {
+    font-size: 20px;
+    width: 20%;
+}
+
+.input-box, .input-box-update {
+    width: 75%;
+}
+
+.form-control input, .form-control textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+.footer-modal {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-modal button {
+    padding: 12px 23px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.cancel, .cancel-update {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.upload, .update {
+    background-color: #0080FF;
+    cursor: pointer;
+}
+
+.cancel:hover {
+    background-color: #A5A5A5;
+}
+
+.cancel-update:hover {
+    background-color: #A5A5A5;
+}
+
+
+.upload:hover {
+    background-color: #004C99;
+    color: #ccc;
+}
+
+#delete-user-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-notify {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 450px;
+    background-color: #fff;
+}
+
+.fa-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.delete-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-content span {
+    font-size: 20px;
+}
+
+.modal-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #ccc;
+}
+
+.modal-footer button {
+    margin-bottom: 10px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.cancel-delete {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: #0080FF;
+    cursor: pointer;
+}
+
+.cancel-delete:hover {
+    background-color: #A5A5A5;
+}
+
+.delete:hover {
+    background-color: #004C99;
+    color: #ccc;
+}
+
+.error, .error-update {
+    color: red;
+    font-size: 14px;
+    margin: 5px 0;
+    height: 16px;
+}

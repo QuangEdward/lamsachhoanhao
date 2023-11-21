@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./admincss/user.css">    
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="nav-header">
+                <a class="toWebsite" href="../homepage.html">Vào trang web</a>
+                <div class="nav-account">
+                    <div class="username"></div>
+                    <div class="logout">Đăng xuất</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <div class="nav-menu" style="font-size: 25px; color: #ccc;">
+                <i class="fa fa-user" style="margin-right: 10px;"></i>
+                <div class="admin">Administrator</div>
+            </div>
+            <div class="nav-menu">
+                <i class="fa fa-home mgright"></i>
+                <div class="nav-title">Trang chủ Admin</div>
+            </div>
+            <div class="nav-menu" onclick="navigateToUser()">
+                <i class="fa fa-users mgright"></i>
+                <div class="nav-title">Quản trị khách hàng</div>
+            </div>
+            <div class="nav-menu" onclick="navigateToService()">
+                <i class="fa fa-hotel mgright"></i>
+                <div class="nav-title">Quản trị dịch vụ</div>
+            </div>
+            <div class="nav-menu" onclick="navigateToNews()">
+                <i class="fa fa-newspaper mgright"></i>
+                <div class="nav-title">Quản trị tin tức</div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="header-content">
+                <div class="home-title">
+                    <i class="fa fa-home"></i>
+                    <div class="admin-home-title">Trang chủ</div>
+                </div>
+                <i class="fa fa-angle-right"></i>
+                <div class="list">Quản trị khách hàng</div>
+            </div>
+            <input onkeyup="filterName()" type="text" placeholder="Tìm kiếm khách hàng">
+            <div class="content">
+                <table style="width: 100%; border-left: 1px solid #ccc;">
+                    <thead>
+                        <tr>
+                            <th style="width: 8%;"></th>
+                            <th style="width: 15%;">Họ và tên</th>
+                            <th style="width: 15%;">Email</th>
+                            <th style="width: 10%;">Số điện thoại</th>
+                            <th style="width: 20%;">Địa chỉ</th>
+                            <th>Nội dung</th>
+                        </tr>
+                    </thead>
+                    <tbody class="user-body">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="delete-user-modal">
+        <div class="modal-notify">
+            <i class="fa fa-close"></i>
+            <div class="delete-content">
+                <span>Bạn có chắc chắn muốn xóa ?</span>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-delete">Hủy</button>
+                <button class="delete">Xóa</button>
+            </div>
+        </div>
+    </div>
+    <script src="./adminjs/admin.js"></script>
+    <script src="./adminjs/user.js"></script>
+</body>
+</html>

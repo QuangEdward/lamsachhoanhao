@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'R', sans-serif;
+}
+
+#main {
+    height: 100vh;
+    position: relative;
+}
+
+.content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#top-page {
+    background: #d82726;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 16px;
+    height: 47px;
+    color: #fff;
+}
+
+.about-us {
+    padding: 0 20px;
+    cursor: pointer;
+    color: #fff;
+    border-right: 1px solid #fff;
+}
+
+.about-us:hover {
+    color: #ccc;
+}
+
+.hotline {
+    margin-left: 20px;
+    padding-right: 16px;
+}
+
+#name-header {
+    text-align: center;
+    background:#EEB422;
+    padding: 20px 16px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bolder;;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.3);
+}
+
+.sticky {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    left: 0;
+    min-height: inherit;
+    background-color: #fff;
+    box-shadow:  0 2px 5px 0 rgba(0,0,0,0.16);
+}
+
+.header-menu {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+   width: 12%;
+   object-fit: contain;
+   padding: 5px 0 5px 16px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.list-menu {
+    padding: 0 12px;
+}
+
+.list-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.list-menu a:hover {
+    color: #d82726;
+}
+
+.icon {
+    display: none;
+}
+
+.icon .fa {
+    font-size: 40px;
+}
+
+.form-container {
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 25px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    color: #fff;
+    background: red;
+    line-height: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid red;
+    margin-top: 25px;
+    transition: color .4s ease-out, background .4s ease-out;
+}
+
+button:hover {
+    color: red;
+    background: #fff;
+}
+
+.errors {
+    display: block;
+    color: red;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+#footer {
+    background: #EEB422;
+    font-size: 14px;
+}
+
+.footer-box {
+    display: flex;
+    justify-content: space-between;
+    color: #2d2c2c;
+    border-bottom: solid 1px #c69311;
+    padding: 40px 16px;
+}
+
+.contact-box {
+    width: 31%;
+}
+
+.title-contact {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.title-menu {
+    margin-bottom: 5px;
+}
+
+.menu-hover:hover {
+    color: #d82726;
+    cursor: pointer;
+}
+
+.contact-social {
+    display: flex;
+    justify-content: center;
+    line-height: 46px;
+}
+
+.social > .fa {
+    color: #fff;
+    line-height: 31px;
+    background-color: #959595;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 33px;
+    height: 33px;
+    text-align: center;
+}
+
+@media screen and (max-width:1000px) {
+    .header-menu {
+        position: relative;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .res-menu {
+        display: block;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 0 16px;
+    }
+
+    .list-menu {
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+    .list-menu:hover a {
+        color: #f6ed55;
+    }
+
+    .list-menu a {
+        width: 100%;
+        display: block;
+    }
+
+    .list-menu a span {
+        font-weight: lighter;
+        font-size: 16px;
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:740px) {
+    .footer-box {
+        display: block;
+        margin: auto;
+    }
+
+    .contact-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+    
+
+
+

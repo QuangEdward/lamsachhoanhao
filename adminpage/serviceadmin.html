@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./admincss/serviceadmin.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="nav-header">
+                <a class="toWebsite" href="../homepage.html">Vào trang web</a>
+                <div class="nav-account">
+                    <div class="username"></div>
+                    <div class="logout">Đăng xuất</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <div class="nav-menu" style="font-size: 25px; color: #ccc;">
+                <i class="fa fa-user" style="margin-right: 10px;"></i>
+                <div class="admin">Administrator</div>
+            </div>
+            <div class="nav-menu">
+                <i class="fa fa-home mgright"></i>
+                <div class="nav-title">Trang chủ Admin</div>
+            </div>
+            <div class="nav-menu" onclick="navigateToUser()">
+                <i class="fa fa-users mgright"></i>
+                <div class="nav-title">Quản trị khách hàng</div>
+            </div>
+            <div class="nav-menu" onclick="navigateToService()">
+                <i class="fa fa-servicestack mgright"></i>
+                <div class="nav-title">Quản trị dịch vụ</div>
+            </div>
+            <div class="nav-menu" onclick="navigateToNews()">
+                <i class="fa fa-newspaper mgright"></i>
+                <div class="nav-title">Quản trị tin tức</div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="header-content">
+                <div class="home-title">
+                    <i class="fa fa-home"></i>
+                    <div class="admin-home-title">Trang chủ</div>
+                </div>
+                <i class="fa fa-angle-right"></i>
+                <div class="list">Quản trị dịch vụ</div>
+            </div>
+            <div class="content">
+                <input onkeyup="filterService()" id="search" type="text" placeholder="Tìm kiếm dịch vụ">
+                <button>
+                    <i class="fa fa-plus"></i>
+                    Thêm mới
+                </button>
+                <table style="border-left: 1px solid #ccc; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;"></th>
+                            <th style="width: 25%;">Danh mục</th>
+                            <th style="width: 25%;">Tiêu đề</th>
+                            <th style="width: 20%;">Ảnh</th>
+                            <th>Chỉnh sửa</th>
+                        </tr>
+                    </thead>
+                    <tbody class="service-table">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Thông tin dịch vụ</span>
+                <i class="add-close fa fa-close"></i>
+            </div>
+            <div class="modal-add-service">
+                <div class="form-control">
+                    <label for="name">Tiêu đề:</label>
+                    <div class="input-box">
+                        <input class="title" type="text" id="name" name="name">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label>Hình ảnh:</label>
+                    <div class="input-box">
+                        <input class="image" name="image" type="file" id="file-upload">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 30px;" class="form-control">
+                    <label for="category">Danh mục:</label>
+                    <select name="category" id="category">
+            
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="name">Thông tin dịch vụ:</label>
+                    <div class="input-box">
+                        <textarea placeholder="Nội dung" rows="10" name="subject" id="subject"></textarea>
+                        <div class="error"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-modal">
+                <button class="cancel">Hủy</button>
+                <button onclick="createService()" class="upload">Đăng</button>
+            </div>
+        </div>
+    </div>
+    <div id="update-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span>Thông tin dịch vụ</span>
+                <i class="add-close fa fa-close"></i>
+            </div>
+            <div class="modal-add-service">
+                <div class="form-control">
+                    <label for="name">Tiêu đề:</label>
+                    <div class="input-box-update">
+                        <input class="title-update" type="text" id="name" name="name">
+                        <div class="error-update"></div>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label>Hình ảnh:</label>
+                    <div class="input-box-update">
+                        <input class="image-update" name="image" type="file" id="file-upload">
+                        <div class="error-update"></div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 30px;" class="form-control">
+                    <label for="category">Danh mục:</label>
+                    <select name="category" id="category-update">
+            
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label for="name">Thông tin dịch vụ:</label>
+                    <div class="input-box-update">
+                        <textarea placeholder="Nội dung" rows="10" name="subject" id="subject-update"></textarea>
+                        <div class="error-update"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-modal">
+                <button class="cancel-update">Hủy</button>
+                <button class="update">Lưu</button>
+            </div>
+        </div>
+    </div>
+    <div id="delete-user-modal">
+        <div class="modal-notify">
+            <i class="close-del fa fa-close"></i>
+            <div class="delete-content">
+                <span>Bạn có chắc chắn muốn xóa ?</span>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-delete">Hủy</button>
+                <button class="delete">Xóa</button>
+            </div>
+        </div>
+    </div>
+    <script src="./adminjs/admin.js"></script>
+    <script src="./adminjs/service.js"></script>
+    
+</body>
+</html>
