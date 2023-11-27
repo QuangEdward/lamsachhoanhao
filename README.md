@@ -7,7 +7,8 @@
 ![Picture1](https://github.com/QuangEdward/lamsachhoanhaocompany_backend/assets/118035047/295869c2-af86-4811-91ca-95a66b1c6fcf)
 
 `Admin Management`
-![Picture1 1](https://github.com/QuangEdward/lamsachhoanhaocompany_backend/assets/118035047/88aee914-b0db-4f52-8d59-947e907c6cdd)
+![image](https://github.com/QuangEdward/lamsachhoanhaocompany_backend/assets/118035047/f4c9b03f-12fd-4742-968d-d4b7ec9799b3)
+
 
 
 # Backend-code
