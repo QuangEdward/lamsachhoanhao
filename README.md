@@ -5,7 +5,7 @@
 
 `UI/UX`
 
-![Picture1](https://github.com/QuangEdward/lamsachhoanhaocompany_backend/assets/118035047/295869c2-af86-4811-91ca-95a66b1c6fcf)
+![image](https://github.com/QuangEdward/lamsachhoanhaocompany_backend/assets/118035047/08652353-b623-4144-9856-0a1ef6f97651)
 
 `Admin Management`
 
