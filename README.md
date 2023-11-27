@@ -1,3 +1,15 @@
+## Introduction
+
+[About the app](https://docs.google.com/presentation/d/1vDmj-XonC4_nYA6ds9e_AqG9BoQ3rEZd/edit?usp=sharing&ouid=100802006352180414710&rtpof=true&sd=true)
+[Detail Feature](https://docs.google.com/presentation/d/1vDmj-XonC4_nYA6ds9e_AqG9BoQ3rEZd/edit?usp=sharing&ouid=100802006352180414710&rtpof=true&sd=true)
+
+`UI/UX`
+![Picture1](https://github.com/QuangEdward/lamsachhoanhaocompany_backend/assets/118035047/295869c2-af86-4811-91ca-95a66b1c6fcf)
+
+`Admin Management`
+![Picture1 1](https://github.com/QuangEdward/lamsachhoanhaocompany_backend/assets/118035047/88aee914-b0db-4f52-8d59-947e907c6cdd)
+
+
 # Backend-code
 
 # Create .env file
